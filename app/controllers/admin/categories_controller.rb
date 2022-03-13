@@ -5,6 +5,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def new
+    @category = Categories.new
   end
 
   def create
