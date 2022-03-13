@@ -9,7 +9,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def create
-    @category = Categories.new(product_params)
+    @category = Categories.new(category_params)
 
     if @category.save
       redirect_to [:admin, :categories], notice: 'Category created!'
