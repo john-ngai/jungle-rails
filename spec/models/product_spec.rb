@@ -11,13 +11,8 @@ RSpec.describe Product, type: :model do
         price: 19.95,
         quantity: 10
       )
-      expect(@product).to be_a Product
-      expect(@product).to have_attributes(
-        name: 'test name',
-        price: 19.95,
-        quantity: 10
-      )
-      expect(@product.category).to have_attributes(name: 'Apparel')
+      expect(@product).to be_valid
+      expect(@product.errors.full_messages).to be_empty
     end 
     
     it 'returns the name' do
