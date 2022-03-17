@@ -20,7 +20,7 @@ RSpec.feature "Visitor navigates from the home page to a product detail page", t
   scenario "They click on a product and see it's detail page" do
     # ACT
     visit root_path
-    find('a.btn-default', match: :first).click
+    click_on('Details', match: :first)
 
     # DEBUG
     # save_screenshot
