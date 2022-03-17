@@ -17,7 +17,7 @@ RSpec.feature "Visitor navigates from the home page to a product detail page", t
     end
   end
 
-  scenario "They click on a product and see it's detail page" do
+  scenario "They click on a product and renders it's detail page" do
     # ACT
     visit root_path
     click_on('Details', match: :first)
